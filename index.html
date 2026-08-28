@@ -2,113 +2,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Somnos Medicina del Sueño</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@400;600;700&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-    <script id="tailwind-config">
-            tailwind.config = {
-                darkMode: "class",
-                theme: {
-                    extend: {
-                        "colors": {
-                            "primary-fixed-dim": "#b4c7ec",
-                            "surface-container": "#f0eded",
-                            "background-primary": "#FDFBF7",
-                            "clinical-blue-muted": "#2C4365",
-                            "on-primary-fixed-variant": "#344766",
-                            "on-tertiary-fixed": "#281800",
-                            "on-tertiary": "#ffffff",
-                            "secondary-container": "#eadecd",
-                            "on-tertiary-container": "#b18f5d",
-                            "on-surface": "#1b1c1c",
-                            "surface-variant": "#e4e2e1",
-                            "on-error-container": "#93000a",
-                            "on-primary": "#ffffff",
-                            "tertiary-fixed-dim": "#e6c18a",
-                            "on-primary-container": "#8396b8",
-                            "surface-bright": "#fbf9f8",
-                            "tertiary-container": "#3f2901",
-                            "error-container": "#ffdad6",
-                            "background": "#fbf9f8",
-                            "on-primary-fixed": "#051c38",
-                            "secondary-fixed-dim": "#d0c5b5",
-                            "on-secondary": "#ffffff",
-                            "error": "#ba1a1a",
-                            "surface-container-high": "#eae8e7",
-                            "on-surface-variant": "#44474d",
-                            "on-background": "#1b1c1c",
-                            "surface-tint": "#4c5f7f",
-                            "surface": "#fbf9f8",
-                            "background-subtle": "#E6DED2",
-                            "on-tertiary-fixed-variant": "#5c4217",
-                            "surface-container-lowest": "#ffffff",
-                            "surface-container-low": "#f6f3f2",
-                            "secondary": "#665d50",
-                            "inverse-on-surface": "#f3f0f0",
-                            "primary": "#021935",
-                            "inverse-surface": "#303030",
-                            "primary-container": "#1a2e4b",
-                            "surface-dim": "#dcd9d9",
-                            "on-error": "#ffffff",
-                            "tertiary-fixed": "#ffddaf",
-                            "surface-container-highest": "#e4e2e1",
-                            "surface-border": "#D1C9BC",
-                            "primary-fixed": "#d5e3ff",
-                            "secondary-fixed": "#ede1d0",
-                            "on-secondary-container": "#6a6154",
-                            "inverse-primary": "#b4c7ec",
-                            "outline-variant": "#c4c6ce",
-                            "tertiary": "#241600",
-                            "on-secondary-fixed-variant": "#4d4639",
-                            "outline": "#74777e",
-                            "on-secondary-fixed": "#201b10"
-                        },
-                        "borderRadius": {
-                            "DEFAULT": "0.25rem",
-                            "lg": "0.5rem",
-                            "xl": "0.75rem",
-                            "full": "9999px"
-                        },
-                        "spacing": {
-                            "container-max": "1200px",
-                            "stack-md": "24px",
-                            "margin-mobile": "20px",
-                            "unit": "4px",
-                            "stack-sm": "12px",
-                            "stack-lg": "48px",
-                            "margin-desktop": "64px",
-                            "gutter": "24px"
-                        },
-                        "fontFamily": {
-                            "headline-md": ["Noto Serif"],
-                            "body-md": ["Manrope"],
-                            "label-caps": ["Manrope"],
-                            "button": ["Manrope"],
-                            "headline-lg-mobile": ["Noto Serif"],
-                            "display-lg": ["Noto Serif"],
-                            "headline-lg": ["Noto Serif"],
-                            "body-lg": ["Manrope"]
-                        },
-                        "fontSize": {
-                            "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                            "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
-                            "button": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
-                            "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                            "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                            "headline-lg": ["40px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                        }
-                    }
-                }
-            }
-        </script>
-    <style>
-            body { background-color: #FDFBF7; color: #1b1c1c; }
-        </style>
+    <link href="dist/styles.css" rel="stylesheet">
     </head>
-    <body class="font-body-md text-body-md antialiased md:hidden pb-20">
+    <body class="font-body-md text-body-md antialiased md:hidden">
     <!-- TopAppBar -->
     
     <main class="w-full">
@@ -119,7 +17,7 @@
     <p class="font-body-md text-body-md text-on-surface-variant">Apnea de sueño: Diagnóstico, tratamiento y seguimiento</p>
     </div>
     <div class="relative w-full aspect-[4/5] border border-surface-border">
-    <img alt="Dra. Daniela Visentini" class="w-full h-full object-cover" data-alt="A portrait of Dra. Daniela Visentini in her clinic, professional medical setting, soft natural lighting." src="https://lh3.googleusercontent.com/aida/AEtjO1WEOJMvg4aBwCvYxiju_SyovLGEczGlYe32ZdadZ1l3T3rnLryyFMyaGPgjGkJlZWEMQs558GWdLpuX0XLgQgSW9V85WFvFOAj22kyZQPExgBAvbeUPDD9sFWXCGm9evuNPzP7wqzjVGLSMfNZPIVP3P88kA90fREZCJpDa2N3oIP6bTWvskx-ZgbMvH-1jNyNsUccNAuDHyxlqOSk3ZS62XHZ4kQk9thqCxuxtCZxuKz_yv1Pd4NwxH4dG">
+    <img alt="Dra. Daniela Visentini" class="w-full h-full object-cover" src="assets/img/dra-daniela-visentini.png">
     <div class="absolute bottom-0 left-0 w-full bg-background-primary/95 backdrop-blur border-t border-surface-border p-4">
     <h2 class="font-headline-md text-headline-md text-primary mb-1">Dra. Daniela Visentini</h2>
     <p class="font-label-caps text-label-caps text-on-surface-variant mb-2">MN 89392 - MP 444949</p>
@@ -160,7 +58,7 @@
     <p class="font-body-md text-body-md text-on-surface-variant">Titulación Domiciliaria de CPAP</p>
     </div>
     <div class="w-full aspect-video border border-surface-border mb-4">
-    <img alt="Titulación de CPAP" class="w-full h-full object-cover" data-alt="A patient undergoing CPAP titration therapy at home, sleeping peacefully with a medical device, warm soft bedroom lighting." src="https://lh3.googleusercontent.com/aida/AEtjO1VBKAEKipZ4Bmg7xfR-MXNDzSG-U0Gkoquoxa7rJXp2_0k3NNCxgy5OAsV1gFQCvmBjZvz1JqPdGbvlSwdCPwBkCypEO8OvLSr2CKxe1l_-j9TibVXLow1Kyo9nY3s0zFEqHUalgmOQ4SpJA80Dk0V-rlJ24iI-NBTzom041IXmJFo2bgfj6rhk76rcBfUzPTN6yVHr_YH2h6Ym75se7Eb7JLLqlB8v8Pb6796VCzyNKVKGr-9Jlq40lhC_">
+    <img alt="Titulación de CPAP" class="w-full h-full object-cover" loading="lazy" src="assets/img/titulacion-cpap.png">
     </div>
     <div class="flex flex-col gap-stack-sm">
     <div class="flex gap-4 items-start">
@@ -202,7 +100,7 @@
     </div>
     </section>
     <!-- Lugares de Atención & Contacto Section (Combined for flow) -->
-    <section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-lg border-t border-surface-border bg-surface-container-low mb-16">
+    <section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-lg border-t border-surface-border bg-surface-container-low">
     <!-- Sedes -->
     <div class="flex flex-col gap-stack-md">
     <h2 class="font-headline-md text-headline-md text-primary">Lugares de Atención</h2>
@@ -228,15 +126,15 @@
     <p class="font-body-md text-body-md text-on-surface-variant text-sm">Coordiná tu consulta de forma simple y directa</p>
     </div>
     <div class="flex flex-col gap-4">
-    <a class="flex items-center gap-4 p-4 border border-surface-border bg-background hover:bg-background-subtle transition-colors" href="#">
-    <span class="material-symbols-outlined text-primary-container">mail</span>
+    <a class="flex items-center gap-4 p-4 border border-surface-border bg-background hover:bg-background-subtle transition-colors" href="mailto:visentiniconsultorio@gmail.com">
+    <span class="material-symbols-outlined text-primary-container" aria-hidden="true">mail</span>
     <div>
     <span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">EMAIL</span>
-    <span class="block font-button text-button text-primary">info@somnos.com.ar</span>
+    <span class="block font-button text-button text-primary">visentiniconsultorio@gmail.com</span>
     </div>
     </a>
-    <a class="flex items-center gap-4 p-4 border border-surface-border bg-background hover:bg-background-subtle transition-colors" href="#">
-    <span class="material-symbols-outlined text-primary-container">chat</span>
+    <a class="flex items-center gap-4 p-4 border border-surface-border bg-background hover:bg-background-subtle transition-colors" href="https://wa.me/5491131389795" target="_blank" rel="noopener">
+    <span class="material-symbols-outlined text-primary-container" aria-hidden="true">chat</span>
     <div>
     <span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">WHATSAPP</span>
     <span class="block font-button text-button text-primary">+54 9 11 3138-9795</span>
@@ -246,12 +144,15 @@
     </div>
     </section>
     </main>
+    <footer class="px-margin-mobile pt-4 pb-28 bg-surface-container-low text-center">
+    <p class="font-body-md text-xs text-on-surface-variant/70">Dra. Daniela Mara Visentini — Medicina del Sueño</p>
+    </footer>
     <!-- BottomNavBar -->
     
     
     
     <div class="fixed bottom-4 left-0 w-full px-margin-mobile z-50">
-      <button class="w-full bg-primary text-on-primary font-button text-button py-4 rounded shadow-lg active:scale-95 transition-transform">
+      <a href="https://wa.me/5491131389795" target="_blank" rel="noopener" class="w-full block text-center bg-primary text-on-primary font-button text-button py-4 rounded shadow-lg active:scale-95 transition-transform">
         PEDIR CITA
-      </button>
+      </a>
     </div></body></html>
