@@ -6,3 +6,11 @@ body {
   background-color: #FDFBF7;
   color: #1b1c1c;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}

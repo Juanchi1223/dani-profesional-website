@@ -6,17 +6,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <link href="dist/styles.css" rel="stylesheet">
     </head>
-    <body class="font-body-md text-body-md antialiased md:hidden">
+    <body class="font-body-md text-body-md antialiased">
     <!-- TopAppBar -->
-    
+    <header class="hidden md:flex sticky top-0 z-40 items-center justify-between w-full px-margin-mobile lg:px-margin-desktop py-4 bg-background-primary/95 backdrop-blur border-b border-surface-border">
+      <div class="flex flex-col">
+        <span class="font-headline-md text-primary text-lg leading-tight">Dra. Daniela Visentini</span>
+        <span class="font-label-caps text-label-caps text-on-surface-variant">MN 89392 - MP 444949</span>
+      </div>
+      <nav class="flex items-center gap-8">
+        <a href="#diagnostico" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Diagnóstico</a>
+        <a href="#tratamiento" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Tratamiento</a>
+        <a href="#sedes" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Sedes</a>
+        <a href="#contacto" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Contacto</a>
+      </nav>
+      <a href="https://wa.me/5491131389795" target="_blank" rel="noopener" class="font-button text-button text-on-primary bg-primary hover:bg-primary-container focus-visible:bg-primary-container transition-colors px-6 py-3 rounded uppercase">
+        Pedir cita
+      </a>
+    </header>
+
     <main class="w-full">
     <!-- Hero Section -->
-    <section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-md bg-surface-container-low">
-    <div class="flex flex-col gap-stack-sm text-center">
-    <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Medicina del Sueño</h1>
-    <p class="font-body-md text-body-md text-on-surface-variant">Apnea de sueño: Diagnóstico, tratamiento y seguimiento</p>
+    <section class="px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24 bg-surface-container-low">
+    <div class="w-full max-w-container-max mx-auto flex flex-col gap-stack-md lg:grid lg:grid-cols-2 lg:gap-gutter lg:items-center">
+    <div class="flex flex-col gap-stack-sm text-center lg:text-left lg:order-1">
+    <h1 class="font-headline-lg-mobile text-headline-lg-mobile lg:font-display-lg lg:text-display-lg text-primary">Medicina del Sueño</h1>
+    <p class="font-body-md text-body-md lg:text-body-lg text-on-surface-variant">Apnea de sueño: Diagnóstico, tratamiento y seguimiento</p>
     </div>
-    <div class="relative w-full aspect-[4/5] border border-surface-border">
+    <div class="relative w-full aspect-[4/5] lg:aspect-[3/4] lg:max-h-[600px] border border-surface-border lg:order-2">
     <img alt="Dra. Daniela Visentini" class="w-full h-full object-cover" src="assets/img/dra-daniela-visentini.png">
     <div class="absolute bottom-0 left-0 w-full bg-background-primary/95 backdrop-blur border-t border-surface-border p-4">
     <h2 class="font-headline-md text-headline-md text-primary mb-1">Dra. Daniela Visentini</h2>
@@ -24,15 +40,16 @@
     <p class="font-body-md text-body-md text-on-surface text-sm">Médica Especialista en Neumonología y Acreditada en Medicina del Sueño</p>
     </div>
     </div>
-    
+    </div>
     </section>
     <!-- Diagnóstico Integral Section -->
-    <section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-md border-t border-surface-border bg-background-primary">
+    <section id="diagnostico" class="px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24 border-t border-surface-border bg-background-primary">
+    <div class="w-full max-w-container-max mx-auto flex flex-col gap-stack-md">
     <div class="mb-4">
-    <h2 class="font-headline-md text-headline-md text-primary mb-2">Diagnóstico Integral</h2>
-    <p class="font-body-md text-body-md text-on-surface-variant">Evaluación completa de ronquidos y apnea del sueño</p>
+    <h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary mb-2">Diagnóstico Integral</h2>
+    <p class="font-body-md text-body-md lg:text-body-lg text-on-surface-variant">Evaluación completa de ronquidos y apnea del sueño</p>
     </div>
-    <div class="flex flex-col gap-stack-sm">
+    <div class="flex flex-col gap-stack-sm md:grid md:grid-cols-2 md:gap-gutter">
     <!-- Evaluation Item -->
     <div class="border border-surface-border p-4 bg-background-subtle">
     <div class="flex items-center gap-3 mb-2">
@@ -50,14 +67,17 @@
     <p class="font-body-md text-body-md text-on-surface text-sm">Estudio realizado en condiciones de sueño habituales en su hogar. Registro preciso de eventos respiratorios y oxigenación.</p>
     </div>
     </div>
+    </div>
     </section>
     <!-- Tratamiento y Seguimiento Section -->
-    <section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-md border-t border-surface-border bg-surface-container-low">
+    <section id="tratamiento" class="px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24 border-t border-surface-border bg-surface-container-low">
+    <div class="w-full max-w-container-max mx-auto flex flex-col gap-stack-md">
     <div class="mb-4">
-    <h2 class="font-headline-md text-headline-md text-primary mb-2">Tratamiento y Seguimiento</h2>
-    <p class="font-body-md text-body-md text-on-surface-variant">Titulación Domiciliaria de CPAP</p>
+    <h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary mb-2">Tratamiento y Seguimiento</h2>
+    <p class="font-body-md text-body-md lg:text-body-lg text-on-surface-variant">Titulación Domiciliaria de CPAP</p>
     </div>
-    <div class="w-full aspect-video border border-surface-border mb-4">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-gutter lg:items-center">
+    <div class="w-full aspect-video border border-surface-border mb-4 lg:mb-0">
     <img alt="Titulación de CPAP" class="w-full h-full object-cover" loading="lazy" src="assets/img/titulacion-cpap.png">
     </div>
     <div class="flex flex-col gap-stack-sm">
@@ -74,14 +94,17 @@
     <p class="font-body-md text-body-md text-on-surface">Monitoreo constante del progreso y acompañamiento ante dificultades.</p>
     </div>
     </div>
+    </div>
+    </div>
     </section>
     <!-- Evaluación Multidisciplinaria -->
-    <section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-md border-t border-surface-border bg-background-primary">
+    <section id="evaluacion" class="px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24 border-t border-surface-border bg-background-primary">
+    <div class="w-full max-w-container-max mx-auto flex flex-col gap-stack-md">
     <div class="mb-4">
-    <h2 class="font-headline-md text-headline-md text-primary mb-2">Evaluación Terapéutica</h2>
-    <p class="font-body-md text-body-md text-on-surface-variant">Abordaje multidisciplinario complementario</p>
+    <h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary mb-2">Evaluación Terapéutica</h2>
+    <p class="font-body-md text-body-md lg:text-body-lg text-on-surface-variant">Abordaje multidisciplinario complementario</p>
     </div>
-    <div class="grid grid-cols-1 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
     <div class="border border-surface-border p-4 bg-background">
     <span class="material-symbols-outlined text-primary-container mb-2 text-2xl">hearing</span>
     <h4 class="font-button text-button text-primary mb-1 uppercase">Otorrinolaringológica</h4>
@@ -98,12 +121,14 @@
     <p class="font-body-md text-body-md text-sm text-on-surface-variant">Dispositivos de avance mandibular cuando es indicado.</p>
     </div>
     </div>
+    </div>
     </section>
     <!-- Lugares de Atención & Contacto Section (Combined for flow) -->
-    <section class="px-margin-mobile py-stack-lg flex flex-col gap-stack-lg border-t border-surface-border bg-surface-container-low">
+    <section id="sedes" class="px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24 border-t border-surface-border bg-surface-container-low">
+    <div class="w-full max-w-container-max mx-auto lg:grid lg:grid-cols-2 lg:gap-stack-lg">
     <!-- Sedes -->
     <div class="flex flex-col gap-stack-md">
-    <h2 class="font-headline-md text-headline-md text-primary">Lugares de Atención</h2>
+    <h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary">Lugares de Atención</h2>
     <div class="flex flex-col gap-stack-sm">
     <div class="border-b border-surface-border pb-4">
     <h4 class="font-button text-button text-primary uppercase mb-1">Swiss Medical Center Olivos</h4>
@@ -120,20 +145,20 @@
     </div>
     </div>
     <!-- Contacto -->
-    <div class="flex flex-col gap-stack-md pt-stack-md border-t border-surface-border">
+    <div id="contacto" class="flex flex-col gap-stack-md pt-stack-md border-t border-surface-border lg:pt-0 lg:border-t-0 lg:border-l lg:pl-stack-lg">
     <div>
-    <h2 class="font-headline-md text-headline-md text-primary mb-2">Contacto</h2>
+    <h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary mb-2">Contacto</h2>
     <p class="font-body-md text-body-md text-on-surface-variant text-sm">Coordiná tu consulta de forma simple y directa</p>
     </div>
     <div class="flex flex-col gap-4">
-    <a class="flex items-center gap-4 p-4 border border-surface-border bg-background hover:bg-background-subtle transition-colors" href="mailto:visentiniconsultorio@gmail.com">
+    <a class="flex items-center gap-4 p-4 border border-surface-border bg-background hover:bg-background-subtle focus-visible:bg-background-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary transition-colors" href="mailto:visentiniconsultorio@gmail.com">
     <span class="material-symbols-outlined text-primary-container" aria-hidden="true">mail</span>
     <div>
     <span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">EMAIL</span>
     <span class="block font-button text-button text-primary">visentiniconsultorio@gmail.com</span>
     </div>
     </a>
-    <a class="flex items-center gap-4 p-4 border border-surface-border bg-background hover:bg-background-subtle transition-colors" href="https://wa.me/5491131389795" target="_blank" rel="noopener">
+    <a class="flex items-center gap-4 p-4 border border-surface-border bg-background hover:bg-background-subtle focus-visible:bg-background-subtle focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary transition-colors" href="https://wa.me/5491131389795" target="_blank" rel="noopener">
     <span class="material-symbols-outlined text-primary-container" aria-hidden="true">chat</span>
     <div>
     <span class="block font-label-caps text-label-caps text-on-surface-variant mb-1">WHATSAPP</span>
@@ -142,16 +167,17 @@
     </a>
     </div>
     </div>
+    </div>
     </section>
     </main>
-    <footer class="px-margin-mobile pt-4 pb-28 bg-surface-container-low text-center">
+    <footer class="px-margin-mobile lg:px-margin-desktop pt-4 pb-28 md:pb-8 bg-surface-container-low text-center">
     <p class="font-body-md text-xs text-on-surface-variant/70">Dra. Daniela Mara Visentini — Medicina del Sueño</p>
     </footer>
     <!-- BottomNavBar -->
     
     
     
-    <div class="fixed bottom-4 left-0 w-full px-margin-mobile z-50">
+    <div class="fixed bottom-4 left-0 w-full px-margin-mobile z-50 md:hidden">
       <a href="https://wa.me/5491131389795" target="_blank" rel="noopener" class="w-full block text-center bg-primary text-on-primary font-button text-button py-4 rounded shadow-lg active:scale-95 transition-transform">
         PEDIR CITA
       </a>
