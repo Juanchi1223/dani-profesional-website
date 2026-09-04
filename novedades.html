@@ -1,0 +1,70 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Novedades — Dra Daniela Visentini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link href="dist/styles.css" rel="stylesheet">
+    </head>
+    <body class="font-body-md text-body-md antialiased">
+    <!-- TopAppBar -->
+    <header class="hidden md:flex sticky top-0 z-40 items-center justify-between w-full px-margin-mobile lg:px-margin-desktop py-4 bg-background-primary/95 backdrop-blur border-b border-surface-border">
+      <div class="flex flex-col">
+        <a href="index.html" class="font-headline-md text-primary text-lg leading-tight">Dra. Daniela Visentini</a>
+        <span class="font-label-caps text-label-caps text-on-surface-variant">MN 89392 - MP 444949</span>
+      </div>
+      <nav class="flex items-center gap-8">
+        <a href="index.html#diagnostico" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Diagnóstico</a>
+        <a href="index.html#tratamiento" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Tratamiento</a>
+        <a href="index.html#novedades" class="font-button text-button text-primary transition-colors uppercase">Novedades</a>
+        <a href="index.html#sedes" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Sedes</a>
+        <a href="index.html#contacto" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Contacto</a>
+      </nav>
+      <a href="https://wa.me/5491131389795" target="_blank" rel="noopener" class="font-button text-button text-on-primary bg-primary hover:bg-primary-container focus-visible:bg-primary-container transition-colors px-6 py-3 rounded uppercase">
+        Pedir cita
+      </a>
+    </header>
+
+    <main class="w-full">
+    <section class="px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24 bg-surface-container-low">
+    <div class="w-full max-w-container-max mx-auto flex flex-col gap-stack-md">
+    <div>
+    <a href="index.html" class="font-button text-button text-on-surface-variant hover:text-primary transition-colors uppercase inline-flex items-center gap-1 mb-4">
+      <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_back</span>
+      Volver al inicio
+    </a>
+    <h1 class="font-headline-md text-headline-lg text-primary mb-2">Novedades</h1>
+    <p class="font-body-md text-body-lg text-on-surface-variant">Estudios y noticias sobre medicina del sueño</p>
+    </div>
+    <div id="novedades-grid" class="grid grid-cols-1 md:grid-cols-3 gap-gutter"></div>
+    </div>
+    </section>
+    </main>
+
+    <footer class="px-margin-mobile lg:px-margin-desktop pt-4 pb-28 md:pb-8 bg-surface-container-low text-center">
+    <p class="font-body-md text-xs text-on-surface-variant/70">Dra. Daniela Mara Visentini — Medicina del Sueño</p>
+    </footer>
+    <!-- BottomNavBar -->
+    <div class="fixed bottom-4 left-0 w-full px-margin-mobile z-50 md:hidden">
+      <a href="https://wa.me/5491131389795" target="_blank" rel="noopener" class="w-full block text-center bg-primary text-on-primary font-button text-button py-4 rounded shadow-lg active:scale-95 transition-transform">
+        PEDIR CITA
+      </a>
+    </div>
+    <script type="module">
+      import { fetchNovedades, renderCard, renderSkeletonCard, renderError } from "./src/js/novedades.js";
+
+      const grid = document.getElementById("novedades-grid");
+      grid.innerHTML = Array(6).fill(renderSkeletonCard()).join("");
+      fetchNovedades(50)
+        .then((items) => {
+          if (!items || items.length === 0) {
+            grid.innerHTML = renderError("Todavía no hay novedades publicadas.");
+            return;
+          }
+          grid.innerHTML = items.map(renderCard).join("");
+        })
+        .catch(() => {
+          grid.innerHTML = renderError("No pudimos cargar las novedades en este momento.");
+        });
+    </script>
+  </body></html>

@@ -16,6 +16,7 @@
       <nav class="flex items-center gap-8">
         <a href="#diagnostico" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Diagnóstico</a>
         <a href="#tratamiento" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Tratamiento</a>
+        <a href="#novedades" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Novedades</a>
         <a href="#sedes" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Sedes</a>
         <a href="#contacto" class="font-button text-button text-on-surface hover:text-primary focus-visible:text-primary transition-colors uppercase">Contacto</a>
       </nav>
@@ -123,7 +124,20 @@
     </div>
     </div>
     </section>
-    <!-- Lugares de Atención & Contacto Section (Combined for flow) -->
+    <!-- Novedades -->
+    <section id="novedades" class="px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24 border-t border-surface-border bg-background-primary">
+    <div class="w-full max-w-container-max mx-auto flex flex-col gap-stack-md">
+    <div class="flex items-end justify-between gap-4 mb-4">
+    <div>
+    <h2 class="font-headline-md text-headline-md lg:text-headline-lg text-primary mb-2">Novedades</h2>
+    <p class="font-body-md text-body-md lg:text-body-lg text-on-surface-variant">Estudios y noticias sobre medicina del sueño</p>
+    </div>
+    <a href="novedades.html" class="font-button text-button text-primary hover:text-primary-container focus-visible:text-primary-container transition-colors uppercase whitespace-nowrap">Ver todas</a>
+    </div>
+    <div id="novedades-grid" class="grid grid-cols-1 md:grid-cols-3 gap-gutter"></div>
+    </div>
+    </section>
+    <!-- Lugares de Atención & Contacto Section (Combined for flow) -->
     <section id="sedes" class="px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24 border-t border-surface-border bg-surface-container-low">
     <div class="w-full max-w-container-max mx-auto lg:grid lg:grid-cols-2 lg:gap-stack-lg">
     <!-- Sedes -->
@@ -181,4 +195,25 @@
       <a href="https://wa.me/5491131389795" target="_blank" rel="noopener" class="w-full block text-center bg-primary text-on-primary font-button text-button py-4 rounded shadow-lg active:scale-95 transition-transform">
         PEDIR CITA
       </a>
-    </div></body></html>
+    </div>
+    <script type="module">
+      import { fetchNovedades, renderCard, renderSkeletonCard, renderError } from "./src/js/novedades.js";
+
+      const grid = document.getElementById("novedades-grid");
+      const section = document.getElementById("novedades");
+      if (grid) {
+        grid.innerHTML = Array(3).fill(renderSkeletonCard()).join("");
+        fetchNovedades(3)
+          .then((items) => {
+            if (!items || items.length === 0) {
+              section.remove();
+              return;
+            }
+            grid.innerHTML = items.map(renderCard).join("");
+          })
+          .catch(() => {
+            grid.innerHTML = renderError("No pudimos cargar las novedades en este momento.");
+          });
+      }
+    </script>
+  </body></html>
