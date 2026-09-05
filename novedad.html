@@ -2,6 +2,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title id="page-title">Novedad — Dra Daniela Visentini</title>
+    <meta id="page-description" name="description" content="Novedades sobre medicina del sueño, apnea y tratamiento con CPAP, por la Dra. Daniela Visentini, neumonóloga en zona norte (Vicente López, Olivos, CABA).">
+    <link id="page-canonical" rel="canonical" href="https://daniela-visentini.online/novedad.html">
+    <meta id="page-og-title" property="og:type" content="article">
+    <meta property="og:title" content="Novedad — Dra. Daniela Visentini">
+    <meta id="page-og-description" property="og:description" content="Novedades sobre medicina del sueño, apnea y tratamiento con CPAP.">
+    <meta property="og:locale" content="es_AR">
+    <meta name="twitter:card" content="summary">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Noto+Serif:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <link href="dist/styles.css" rel="stylesheet">
@@ -89,6 +96,17 @@
               return;
             }
             document.getElementById("page-title").textContent = `${n.titulo} — Dra Daniela Visentini`;
+            const resumen = (n.cuerpo || [])
+              .filter((b) => b._type === "block")
+              .map((b) => (b.children || []).map((c) => c.text).join(""))
+              .join(" ")
+              .slice(0, 155);
+            if (resumen) {
+              document.getElementById("page-description").setAttribute("content", resumen);
+              document.getElementById("page-og-description").setAttribute("content", resumen);
+            }
+            document.getElementById("page-canonical").setAttribute("href", `${location.origin}${location.pathname}?slug=${encodeURIComponent(slug)}`);
+            document.querySelector('meta[property="og:title"]').setAttribute("content", `${n.titulo} — Dra. Daniela Visentini`);
             const cover = n.portada
               ? `<img src="${esc(n.portada)}?w=1200&auto=format" alt="" loading="lazy" class="w-full border border-surface-border">`
               : "";
